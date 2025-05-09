@@ -1,4 +1,4 @@
-module gitlab.xpaas.lenovo.com/observability/lib/go-swagger
+module github.com/Scterl/go-swagger
 
 go 1.17
 

@@ -1,0 +1,35 @@
+definitions:
+  models.GreatingRequest:
+    properties:
+      name:
+        type: string
+    type: object
+  models.GreatingResponse:
+    properties:
+      greating:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /greating:
+    post:
+      consumes:
+      - application/json
+      description: sayhello
+      parameters:
+      - description: request
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/models.GreatingRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.GreatingResponse'
+      summary: SayHello
+swagger: "2.0"

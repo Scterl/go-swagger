@@ -1,0 +1,17 @@
+info:
+  contact: {}
+paths:
+  /hello:
+    get:
+      consumes:
+      - application/json
+      description: sayhello
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: SayHello
+swagger: "2.0"

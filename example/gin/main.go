@@ -5,8 +5,6 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"gitlab.xpaas.lenovo.com/observability/lib/go-swagger/example/gin/models"
-	"gitlab.xpaas.lenovo.com/observability/lib/go-swagger/swagger"
 )
 
 // @Summary SayHello

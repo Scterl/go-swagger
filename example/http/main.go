@@ -2,13 +2,10 @@ package main
 
 import (
 	"net/http"
-
-	"gitlab.xpaas.lenovo.com/observability/lib/go-swagger/swagger"
 )
 
 func main() {
 	http.HandleFunc("/hello", sayHello)
-	swagger.Swagger(http.DefaultServeMux)
 
 	http.ListenAndServe(":8080", nil)
 }

@@ -9,14 +9,11 @@ import (
 	"github.com/VictoriaMetrics/VictoriaMetrics/lib/httpserver"
 	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
 	"github.com/VictoriaMetrics/VictoriaMetrics/lib/procutil"
-	"gitlab.xpaas.lenovo.com/observability/lib/go-swagger/swagger"
 )
 
 func main() {
 	envflag.Parse()
 	buildinfo.Init()
-
-	go httpserver.Serve("0.0.0.0:8080", swagger.NewVictoriaSwagger().Swagger(mux))
 
 	sig := procutil.WaitForSigterm()
 	logger.Infof("service received signal %s", sig)
